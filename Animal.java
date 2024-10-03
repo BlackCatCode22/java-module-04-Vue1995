@@ -1,4 +1,4 @@
-package hello.zoo.com;
+package sheena.zoo.com;
 import java.util.Date;
 
 public class Animal {
@@ -9,13 +9,23 @@ public class Animal {
     public Animal(){
         numOfAnimals++;
     }
-    // Create a constructor that accepts a name
-    public Animal(String aName) {
-        this.animalName = aName; numOfAnimals++;
+
+    //Create a constructor that will accept all fields as arguments
+    public Animal(String sex, int age, int weight, String animalName,
+                  String animalID, String animalBirthdate, String animalColor,
+                  String animalOrigin) {
+        this.sex = sex;
+        this.age = age;
+        this.weight = weight;
+        this.animalName = animalName;
+        this.animalID = animalID;
+        this.animalBirthdate = animalBirthdate;
+        this.animalColor = animalColor;
+        this.animalOrigin = animalOrigin;
     }
 
 
-    //Create a few attributes (fields)
+    //Create a all attributes (fields) needed for midterm
     // Age will be in years
     private int age;
     // Sex (male or female)
@@ -26,11 +36,11 @@ public class Animal {
     private String animalID;
     // Animal names
     private String animalName;
-    // Animal birthdate
-    private Date animalBirthdate;
+    // Animal birthdate is going to be a string here (in this class)
+    private String animalBirthdate;
     // Animal color
     private String animalColor;
-    // Animal origin
+    // Animal origin will be a string like: "from Friguia Park, Tunisia"
     private String animalOrigin;
     // Arrival date
     private Date animalArrivalDate;
@@ -60,36 +70,42 @@ public class Animal {
     public void setWeight(int weight) {
         this.weight = weight;
     }
+
     public String getAnimalID() {
         return animalID;
     }
     public void setAnimalID(String animalID) {
         this.animalID = animalID;
     }
+
     public String getAnimalName() {
         return animalName;
     }
     public void setAnimalName(String animalName) {
         this.animalName = animalName;
     }
-    public Date getAnimalBirthdate() {
+
+    public String getAnimalBirthdate() {
         return animalBirthdate;
     }
     public void setAnimalBirthdate(Date animalBirthdate) {
-        this.animalBirthdate = animalBirthdate;
+        this.animalBirthdate = String.valueOf(animalBirthdate);
     }
+
     public String getAnimalColor() {
         return animalColor;
     }
     public void setAnimalColor(String animalColor) {
         this.animalColor = animalColor;
     }
+
     public String getAnimalOrigin() {
         return animalOrigin;
     }
     public void setAnimalOrigin(String animalOrigin) {
         this.animalOrigin = animalOrigin;
     }
+
     public Date getAnimalArrivalDate() {
         return animalArrivalDate;
     }
